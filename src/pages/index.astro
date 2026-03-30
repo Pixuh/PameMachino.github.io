@@ -1,18 +1,117 @@
 ---
-
+// index.astro con Tailwind CSS
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Asistente digital</title>
-	</head>
-	<body>
-		<h1>Asistente digital de navegación segura para ciclistas urbanos en Concepción: Clasificación
-inteligente de tramos y zonas de riesgo en tiempo real</h1>
-	</body>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Asistente Digital para Ciclistas</title>
+  </head>
+  <body class="bg-slate-50 text-slate-900 font-sans">
+
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+      <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+        <div class="text-2xl font-black text-blue-600 italic">APP</div>
+        <div class="hidden md:flex gap-8 font-medium text-slate-600">
+          <a href="#problema" class="hover:text-blue-600 transition">Problema</a>
+          <a href="#propuesta" class="hover:text-blue-600 transition">Propuesta</a>
+          <a href="#comparativa" class="hover:text-blue-600 transition">Comparativa</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="bg-slate-900 py-20 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+          <span class="bg-blue-500/10 text-blue-400 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-blue-500/20">
+            Proyecto UBB - Concepción
+          </span>
+          <h1 class="text-4xl md:text-6xl font-extrabold text-white mt-6 mb-4">
+            Navegación Segura para Ciclistas
+          </h1>
+          <p class="text-lg text-slate-400 mb-8">
+            Asistente digital con IA para clasificar riesgos y optimizar rutas en Concepción.
+          </p>
+        </div>
+      </section>
+
+      <section id="problema" class="max-w-5xl mx-auto py-20 px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">Análisis de la Problemática</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="p-8 bg-white rounded-2xl shadow-sm border border-slate-100">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">📍</div>
+            <h3 class="text-xl font-bold mb-3">Contexto Regional</h3>
+            <p class="text-slate-600">Enfocado en ciclistas urbanos de <strong>Concepción</strong>, quienes enfrentan desafíos únicos en rutas compartidas.</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl shadow-sm border border-red-100 ring-1 ring-red-50">
+            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">⚠️</div>
+            <h3 class="text-xl font-bold mb-3 text-red-900">El Vacío de Seguridad</h3>
+            <p class="text-slate-600">Otras aplicaciones priorizan el tiempo, pero no analizan <strong>datos delictivos</strong> ni el estado real de la infraestructura vial.</p>
+          </div>
+        </div>
+		</section>
+
+		<section id="propuesta" class="bg-blue-600 py-20 px-4 text-white">
+			<div class="max-w-5xl mx-auto">
+			<h2 class="text-3xl font-bold mb-8">Propuesta Tecnológica</h2>
+			<div class="grid md:grid-cols-3 gap-6">
+				<div class="bg-blue-700/50 p-6 rounded-xl border border-blue-400/30">
+				<h4 class="font-bold text-lg mb-2">PWA</h4>
+				<p class="text-blue-100 text-sm">Aplicación web progresiva accesible desde cualquier dispositivo móvil.</p>
+				</div>
+				<div class="bg-blue-700/50 p-6 rounded-xl border border-blue-400/30">
+				<h4 class="font-bold text-lg mb-2">IA en Tiempo Real</h4>
+				<p class="text-blue-100 text-sm">Motor de IA encargado de clasificar reportes comunitarios instantáneamente.</p>
+				</div>
+				<div class="bg-blue-700/50 p-6 rounded-xl border border-blue-400/30">
+				<h4 class="font-bold text-lg mb-2">Rutas Seguras</h4>
+				<p class="text-blue-100 text-sm">Cálculo de trayectos maximizando la permanencia en zonas de bajo riesgo.</p>
+				</div>
+			</div>
+			</div>
+		</section>
+
+		<section id="comparativa" class="max-w-5xl mx-auto py-20 px-4">
+		<h2 class="text-3xl font-bold mb-12 text-center text-slate-800">Análisis Comparativo</h2>
+		
+		<div class="overflow-hidden rounded-2xl border border-slate-200 shadow-lg bg-white">
+			<table class="w-full text-left border-collapse">
+			<thead>
+				<tr class="bg-slate-50 border-b border-slate-200">
+				<th class="px-6 py-4 text-sm font-semibold text-slate-600 uppercase tracking-wider">Herramienta</th>
+				<th class="px-6 py-4 text-sm font-semibold text-slate-600 uppercase tracking-wider">Funciones Principales</th>
+				<th class="px-6 py-4 text-sm font-semibold text-slate-600 uppercase tracking-wider">Diferencia con este Proyecto</th>
+				</tr>
+			</thead>
+			<tbody class="divide-y divide-slate-100">
+				<tr class="hover:bg-slate-50 transition-colors">
+				<td class="px-6 py-5 text-slate-700 font-medium">Google Maps / Strava</td>
+				<td class="px-6 py-5 text-slate-600">Navegación generalista y métricas deportivas.</td>
+				<td class="px-6 py-5 text-slate-500 italic">No consideran seguridad ciudadana como variable crítica.</td>
+				</tr>
+				
+				<tr class="hover:bg-slate-50 transition-colors">
+				<td class="px-6 py-5 text-slate-700 font-medium">Bikleta / Pedalea.org</td>
+				<td class="px-6 py-5 text-slate-600">Fomento al uso de bici y consejos de mecánica.</td>
+				<td class="px-6 py-5 text-slate-500 italic">Sin motor de IA para procesamiento de riesgos en tiempo real.</td>
+				</tr>
+				
+				<tr class="bg-blue-50/50">
+				<td class="px-6 py-5 text-blue-700 font-bold">Nuestra Propuesta</td>
+				<td class="px-6 py-5 text-blue-900 font-semibold italic">Navegación + IA de Seguridad + Reportes Comunitarios</td>
+				<td class="px-6 py-5">
+					<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-emerald-100 text-emerald-700">
+					✔ Solución específica para el contexto de Concepción
+					</span>
+				</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		</section>
+    </main>
+
+  </body>
+
 </html>
