@@ -1,117 +1,402 @@
 ---
-// index.astro con Tailwind CSS
+// index.astro
 ---
 
 <html lang="es" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Asistente Digital para Ciclistas</title>
+    <title>[Nombre de Proyecto] | Navegación Segura para Ciclistas</title>
+    <meta
+      name="description"
+      content="Plataforma inteligente para ciclistas en Concepción que analiza riesgo urbano, recomienda rutas más seguras y mejora la movilidad con IA."
+    />
   </head>
-  <body class="bg-slate-50 text-slate-900 font-sans">
 
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-      <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-        <div class="text-2xl font-black text-blue-600 italic">APP</div>
-        <div class="hidden md:flex gap-8 font-medium text-slate-600">
+  <body class="bg-slate-50 text-slate-900 font-sans">
+    <nav class="sticky top-0 z-50 border-b border-slate-200 bg-white/85 backdrop-blur-md">
+      <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+        <a href="#" class="text-2xl font-black text-blue-700 tracking-tight">
+          Nombre<span class="text-slate-900">Proyecto</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8 font-medium text-slate-600">
           <a href="#problema" class="hover:text-blue-600 transition">Problema</a>
-          <a href="#propuesta" class="hover:text-blue-600 transition">Propuesta</a>
+          <a href="#solucion" class="hover:text-blue-600 transition">Solución</a>
+          <a href="#ia" class="hover:text-blue-600 transition">IA</a>
           <a href="#comparativa" class="hover:text-blue-600 transition">Comparativa</a>
         </div>
+
+        <a
+          href="#solucion"
+          class="hidden md:inline-flex items-center rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition"
+        >
+          Ver propuesta
+        </a>
       </div>
     </nav>
 
     <main>
-      <section class="bg-slate-900 py-20 px-4 text-center">
-        <div class="max-w-3xl mx-auto">
-          <span class="bg-blue-500/10 text-blue-400 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-blue-500/20">
-            Proyecto UBB - Concepción
-          </span>
-          <h1 class="text-4xl md:text-6xl font-extrabold text-white mt-6 mb-4">
-            Navegación Segura para Ciclistas
-          </h1>
-          <p class="text-lg text-slate-400 mb-8">
-            Asistente digital con IA para clasificar riesgos y optimizar rutas en Concepción.
-          </p>
+      <section class="relative overflow-hidden bg-slate-950 py-24 px-4">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-700/20 via-cyan-400/10 to-transparent"></div>
+
+        <div class="relative max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-flex items-center rounded-full border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-blue-300">
+              Proyecto UBB · Concepción · Movilidad Inteligente
+            </span>
+
+            <h1 class="mt-6 text-4xl md:text-6xl font-extrabold leading-tight text-white">
+              La ruta más segura,
+              <span class="text-blue-400">impulsada por IA</span>
+            </h1>
+
+            <p class="mt-6 max-w-2xl text-lg md:text-xl text-slate-300">
+              [Nombre de Proyecto] analiza zonas de riesgo, reportes comunitarios y patrones urbanos
+              para recomendar trayectos más seguros a ciclistas en Concepción.
+            </p>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <a
+                href="#ia"
+                class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-lg hover:bg-blue-700 transition"
+              >
+                Ver cómo funciona la IA
+              </a>
+
+              <a
+                href="#comparativa"
+                class="inline-flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900 px-6 py-3 text-base font-semibold text-slate-200 hover:border-slate-500 hover:bg-slate-800 transition"
+              >
+                Comparar solución
+              </a>
+            </div>
+
+            <div class="mt-10 grid grid-cols-3 gap-4 text-center">
+              <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+                <div class="text-2xl font-extrabold text-white">IA</div>
+                <div class="mt-1 text-sm text-slate-400">Predicción de riesgo</div>
+              </div>
+              <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+                <div class="text-2xl font-extrabold text-white">24/7</div>
+                <div class="mt-1 text-sm text-slate-400">Reportes urbanos</div>
+              </div>
+              <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+                <div class="text-2xl font-extrabold text-white">Local</div>
+                <div class="mt-1 text-sm text-slate-400">Pensado para Concepción</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:pl-8">
+            <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur-sm">
+              <div class="rounded-2xl bg-slate-900 p-6 border border-slate-800">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-sm font-semibold text-blue-300">Simulación de recomendación</p>
+                    <h3 class="mt-1 text-2xl font-bold text-white">Ruta recomendada por [Nombre de Proyecto]</h3>
+                  </div>
+                  <span class="rounded-full bg-emerald-500/15 px-3 py-1 text-sm font-semibold text-emerald-300">
+                    Riesgo Bajo
+                  </span>
+                </div>
+
+                <div class="mt-6 space-y-4">
+                  <div class="rounded-xl border border-slate-800 bg-slate-950 p-4">
+                    <p class="text-sm text-slate-400">Origen</p>
+                    <p class="font-semibold text-white">Barrio Universitario</p>
+                  </div>
+
+                  <div class="rounded-xl border border-slate-800 bg-slate-950 p-4">
+                    <p class="text-sm text-slate-400">Destino</p>
+                    <p class="font-semibold text-white">Centro de Concepción</p>
+                  </div>
+
+                  <div class="grid grid-cols-3 gap-3">
+                    <div class="rounded-xl bg-slate-950 border border-slate-800 p-4 text-center">
+                      <p class="text-xs uppercase tracking-wide text-slate-500">Tiempo</p>
+                      <p class="mt-1 text-lg font-bold text-white">14 min</p>
+                    </div>
+                    <div class="rounded-xl bg-slate-950 border border-slate-800 p-4 text-center">
+                      <p class="text-xs uppercase tracking-wide text-slate-500">Seguridad</p>
+                      <p class="mt-1 text-lg font-bold text-blue-400">Alta</p>
+                    </div>
+                    <div class="rounded-xl bg-slate-950 border border-slate-800 p-4 text-center">
+                      <p class="text-xs uppercase tracking-wide text-slate-500">Alertas</p>
+                      <p class="mt-1 text-lg font-bold text-white">2</p>
+                    </div>
+                  </div>
+
+                  <div class="rounded-xl border border-blue-500/20 bg-blue-500/10 p-4">
+                    <p class="text-sm font-semibold text-blue-200">
+                      La IA recomienda esta ruta porque reduce exposición a zonas de mayor riesgo
+                      y prioriza tramos con mejor infraestructura vial.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="problema" class="max-w-5xl mx-auto py-20 px-4">
-        <h2 class="text-3xl font-bold mb-12 text-center">Análisis de la Problemática</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="p-8 bg-white rounded-2xl shadow-sm border border-slate-100">
-            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">📍</div>
-            <h3 class="text-xl font-bold mb-3">Contexto Regional</h3>
-            <p class="text-slate-600">Enfocado en ciclistas urbanos de <strong>Concepción</strong>, quienes enfrentan desafíos únicos en rutas compartidas.</p>
+      <section id="problema" class="max-w-6xl mx-auto py-20 px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <span class="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">El problema</span>
+          <h2 class="mt-3 text-3xl md:text-5xl font-extrabold text-slate-900">
+            Moverse en bicicleta también implica gestionar riesgo
+          </h2>
+          <p class="mt-5 text-lg text-slate-600">
+            Hoy muchas plataformas optimizan tiempo y distancia, pero no incorporan
+            de forma clara factores de seguridad urbana ni contexto local.
+          </p>
+        </div>
+
+        <div class="mt-14 grid md:grid-cols-3 gap-6">
+          <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-2xl">
+              🚲
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Movilidad vulnerable</h3>
+            <p class="mt-3 text-slate-600">
+              El ciclista urbano está más expuesto a entornos inseguros, cruces complejos
+              y rutas poco adaptadas.
+            </p>
           </div>
-          <div class="p-8 bg-white rounded-2xl shadow-sm border border-red-100 ring-1 ring-red-50">
-            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">⚠️</div>
-            <h3 class="text-xl font-bold mb-3 text-red-900">El Vacío de Seguridad</h3>
-            <p class="text-slate-600">Otras aplicaciones priorizan el tiempo, pero no analizan <strong>datos delictivos</strong> ni el estado real de la infraestructura vial.</p>
+
+          <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-100 text-2xl">
+              🗺️
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Información fragmentada</h3>
+            <p class="mt-3 text-slate-600">
+              Los datos sobre incidentes, percepción de riesgo y estado de la vía suelen
+              estar dispersos o no llegan a tiempo.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-red-200 bg-white p-8 shadow-sm ring-1 ring-red-50">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-red-100 text-2xl">
+              ⚠️
+            </div>
+            <h3 class="text-xl font-bold text-red-900">Decisiones sin apoyo inteligente</h3>
+            <p class="mt-3 text-slate-600">
+              Elegir una ruta solo por rapidez puede aumentar la exposición a zonas
+              conflictivas o poco seguras.
+            </p>
           </div>
         </div>
-		</section>
+      </section>
 
-		<section id="propuesta" class="bg-blue-600 py-20 px-4 text-white">
-			<div class="max-w-5xl mx-auto">
-			<h2 class="text-3xl font-bold mb-8">Propuesta Tecnológica</h2>
-			<div class="grid md:grid-cols-3 gap-6">
-				<div class="bg-blue-700/50 p-6 rounded-xl border border-blue-400/30">
-				<h4 class="font-bold text-lg mb-2">PWA</h4>
-				<p class="text-blue-100 text-sm">Aplicación web progresiva accesible desde cualquier dispositivo móvil.</p>
-				</div>
-				<div class="bg-blue-700/50 p-6 rounded-xl border border-blue-400/30">
-				<h4 class="font-bold text-lg mb-2">IA en Tiempo Real</h4>
-				<p class="text-blue-100 text-sm">Motor de IA encargado de clasificar reportes comunitarios instantáneamente.</p>
-				</div>
-				<div class="bg-blue-700/50 p-6 rounded-xl border border-blue-400/30">
-				<h4 class="font-bold text-lg mb-2">Rutas Seguras</h4>
-				<p class="text-blue-100 text-sm">Cálculo de trayectos maximizando la permanencia en zonas de bajo riesgo.</p>
-				</div>
-			</div>
-			</div>
-		</section>
+      <section id="solucion" class="bg-white py-20 px-4 border-y border-slate-200">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <span class="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">La solución</span>
+              <h2 class="mt-3 text-3xl md:text-5xl font-extrabold text-slate-900">
+                Una plataforma que no solo guía,
+                <span class="text-blue-700">también anticipa</span>
+              </h2>
+              <p class="mt-5 text-lg text-slate-600">
+                [Nombre de Proyecto] combina navegación, análisis predictivo y participación comunitaria
+                para entregar una experiencia de movilidad más segura y confiable.
+              </p>
+            </div>
 
-		<section id="comparativa" class="max-w-5xl mx-auto py-20 px-4">
-		<h2 class="text-3xl font-bold mb-12 text-center text-slate-800">Análisis Comparativo</h2>
-		
-		<div class="overflow-hidden rounded-2xl border border-slate-200 shadow-lg bg-white">
-			<table class="w-full text-left border-collapse">
-			<thead>
-				<tr class="bg-slate-50 border-b border-slate-200">
-				<th class="px-6 py-4 text-sm font-semibold text-slate-600 uppercase tracking-wider">Herramienta</th>
-				<th class="px-6 py-4 text-sm font-semibold text-slate-600 uppercase tracking-wider">Funciones Principales</th>
-				<th class="px-6 py-4 text-sm font-semibold text-slate-600 uppercase tracking-wider">Diferencia con este Proyecto</th>
-				</tr>
-			</thead>
-			<tbody class="divide-y divide-slate-100">
-				<tr class="hover:bg-slate-50 transition-colors">
-				<td class="px-6 py-5 text-slate-700 font-medium">Google Maps / Strava</td>
-				<td class="px-6 py-5 text-slate-600">Navegación generalista y métricas deportivas.</td>
-				<td class="px-6 py-5 text-slate-500 italic">No consideran seguridad ciudadana como variable crítica.</td>
-				</tr>
-				
-				<tr class="hover:bg-slate-50 transition-colors">
-				<td class="px-6 py-5 text-slate-700 font-medium">Bikleta / Pedalea.org</td>
-				<td class="px-6 py-5 text-slate-600">Fomento al uso de bici y consejos de mecánica.</td>
-				<td class="px-6 py-5 text-slate-500 italic">Sin motor de IA para procesamiento de riesgos en tiempo real.</td>
-				</tr>
-				
-				<tr class="bg-blue-50/50">
-				<td class="px-6 py-5 text-blue-700 font-bold">Nuestra Propuesta</td>
-				<td class="px-6 py-5 text-blue-900 font-semibold italic">Navegación + IA de Seguridad + Reportes Comunitarios</td>
-				<td class="px-6 py-5">
-					<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-emerald-100 text-emerald-700">
-					✔ Solución específica para el contexto de Concepción
-					</span>
-				</td>
-				</tr>
-			</tbody>
-			</table>
-		</div>
-		</section>
+            <div class="grid gap-5">
+              <div class="rounded-2xl bg-slate-50 p-6 border border-slate-200">
+                <h3 class="text-lg font-bold text-slate-900">Predicción de riesgo</h3>
+                <p class="mt-2 text-slate-600">
+                  La IA evalúa zonas, horarios y comportamiento histórico para estimar
+                  el nivel de riesgo antes de iniciar el trayecto.
+                </p>
+              </div>
+
+              <div class="rounded-2xl bg-slate-50 p-6 border border-slate-200">
+                <h3 class="text-lg font-bold text-slate-900">Recomendación inteligente</h3>
+                <p class="mt-2 text-slate-600">
+                  El sistema propone rutas equilibrando tiempo, seguridad e infraestructura disponible.
+                </p>
+              </div>
+
+              <div class="rounded-2xl bg-slate-50 p-6 border border-slate-200">
+                <h3 class="text-lg font-bold text-slate-900">Comunidad + datos vivos</h3>
+                <p class="mt-2 text-slate-600">
+                  Los reportes de usuarios enriquecen el modelo para que la plataforma
+                  aprenda y mejore continuamente.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ia" class="bg-blue-700 py-20 px-4 text-white">
+        <div class="max-w-6xl mx-auto">
+          <div class="max-w-3xl">
+            <span class="text-sm font-bold uppercase tracking-[0.2em] text-blue-100">Motor de IA</span>
+            <h2 class="mt-3 text-3xl md:text-5xl font-extrabold">
+              Así se convierte una app en una solución inteligente
+            </h2>
+            <p class="mt-5 text-lg text-blue-100">
+              El valor diferencial del proyecto está en una IA que transforma datos urbanos
+              en decisiones útiles para el usuario final.
+            </p>
+          </div>
+
+          <div class="mt-14 grid md:grid-cols-3 gap-6">
+            <div class="rounded-2xl border border-white/15 bg-white/10 p-8 backdrop-blur-sm">
+              <div class="text-3xl">1</div>
+              <h3 class="mt-4 text-xl font-bold">Recopila datos</h3>
+              <p class="mt-3 text-blue-100">
+                Integra reportes comunitarios, contexto de la ruta, patrones horarios
+                y comportamiento histórico.
+              </p>
+            </div>
+
+            <div class="rounded-2xl border border-white/15 bg-white/10 p-8 backdrop-blur-sm">
+              <div class="text-3xl">2</div>
+              <h3 class="mt-4 text-xl font-bold">Clasifica y predice</h3>
+              <p class="mt-3 text-blue-100">
+                El modelo identifica zonas sensibles, anticipa condiciones de riesgo
+                y prioriza trayectos más convenientes.
+              </p>
+            </div>
+
+            <div class="rounded-2xl border border-white/15 bg-white/10 p-8 backdrop-blur-sm">
+              <div class="text-3xl">3</div>
+              <h3 class="mt-4 text-xl font-bold">Recomienda acciones</h3>
+              <p class="mt-3 text-blue-100">
+                Entrega una sugerencia clara, comprensible y útil para ayudar al usuario
+                a moverse con mayor confianza.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-6xl mx-auto py-20 px-4">
+        <div class="rounded-3xl bg-slate-900 px-8 py-12 md:px-12 md:py-16 text-white overflow-hidden relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-400/10"></div>
+          <div class="relative grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <span class="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">Valor para clientes y usuarios</span>
+              <h2 class="mt-3 text-3xl md:text-5xl font-extrabold">
+                Más que una app, una propuesta de ciudad inteligente
+              </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="rounded-2xl bg-white/5 p-5 border border-white/10">
+                <h3 class="font-bold">Menor exposición al riesgo</h3>
+                <p class="mt-2 text-slate-300 text-sm">
+                  Mejora la experiencia del ciclista al priorizar trayectos más seguros.
+                </p>
+              </div>
+              <div class="rounded-2xl bg-white/5 p-5 border border-white/10">
+                <h3 class="font-bold">Diferenciación tecnológica</h3>
+                <p class="mt-2 text-slate-300 text-sm">
+                  La IA entrega un elemento innovador y comercialmente atractivo.
+                </p>
+              </div>
+              <div class="rounded-2xl bg-white/5 p-5 border border-white/10">
+                <h3 class="font-bold">Escalabilidad</h3>
+                <p class="mt-2 text-slate-300 text-sm">
+                  El modelo puede adaptarse a otras comunas y ciudades en el futuro.
+                </p>
+              </div>
+              <div class="rounded-2xl bg-white/5 p-5 border border-white/10">
+                <h3 class="font-bold">Impacto urbano</h3>
+                <p class="mt-2 text-slate-300 text-sm">
+                  Contribuye a movilidad sostenible, percepción de seguridad y uso de la bicicleta.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="comparativa" class="max-w-6xl mx-auto py-20 px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <span class="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">Comparativa</span>
+          <h2 class="mt-3 text-3xl md:text-5xl font-extrabold text-slate-900">
+            ¿Por qué esta propuesta destaca?
+          </h2>
+          <p class="mt-5 text-lg text-slate-600">
+            La diferencia no está solo en navegar, sino en transformar datos en decisiones seguras.
+          </p>
+        </div>
+
+        <div class="mt-12 overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-lg">
+          <table class="w-full min-w-[760px] text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-50 border-b border-slate-200">
+                <th class="px-6 py-4 text-sm font-semibold uppercase tracking-wider text-slate-600">Herramienta</th>
+                <th class="px-6 py-4 text-sm font-semibold uppercase tracking-wider text-slate-600">Enfoque principal</th>
+                <th class="px-6 py-4 text-sm font-semibold uppercase tracking-wider text-slate-600">Uso de IA</th>
+                <th class="px-6 py-4 text-sm font-semibold uppercase tracking-wider text-slate-600">Diferenciación</th>
+              </tr>
+            </thead>
+
+            <tbody class="divide-y divide-slate-100">
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-5 font-medium text-slate-800">Google Maps / Strava</td>
+                <td class="px-6 py-5 text-slate-600">Navegación general y seguimiento de actividad</td>
+                <td class="px-6 py-5 text-slate-500">No enfocado en seguridad urbana predictiva</td>
+                <td class="px-6 py-5 text-slate-500 italic">
+                  Priorizan eficiencia o deporte, no riesgo local específico.
+                </td>
+              </tr>
+
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-5 font-medium text-slate-800">Bikleta / Pedalea.org</td>
+                <td class="px-6 py-5 text-slate-600">Promoción del ciclismo y apoyo a la comunidad</td>
+                <td class="px-6 py-5 text-slate-500">Sin motor predictivo en tiempo real</td>
+                <td class="px-6 py-5 text-slate-500 italic">
+                  Aportan información útil, pero no recomiendan rutas inteligentes según riesgo.
+                </td>
+              </tr>
+
+              <tr class="bg-blue-50/70">
+                <td class="px-6 py-5 font-bold text-blue-700">[Nombre de Proyecto]</td>
+                <td class="px-6 py-5 font-semibold text-slate-900">
+                  Movilidad segura + análisis predictivo + comunidad
+                </td>
+                <td class="px-6 py-5 text-blue-700 font-semibold">
+                  Clasificación de riesgo, aprendizaje continuo y recomendación inteligente
+                </td>
+                <td class="px-6 py-5">
+                  <span class="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-700">
+                    Solución comercializable y pensada para Concepción
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="pb-24 px-4">
+        <div class="max-w-5xl mx-auto rounded-3xl bg-white border border-slate-200 p-10 md:p-14 text-center shadow-sm">
+          <span class="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">Cierre</span>
+          <h2 class="mt-4 text-3xl md:text-5xl font-extrabold text-slate-900">
+            No estamos proponiendo solo una app.
+          </h2>
+          <p class="mt-5 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+            Estamos proponiendo una plataforma inteligente capaz de mejorar la seguridad,
+            la experiencia del usuario y la movilidad urbana con apoyo de IA.
+          </p>
+
+          <div class="mt-8">
+            <a
+              href="#"
+              class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 text-base font-semibold text-white hover:bg-blue-700 transition"
+            >
+              Presentar propuesta
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
-
   </body>
-
 </html>
